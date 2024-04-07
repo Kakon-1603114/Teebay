@@ -1,0 +1,61 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL") // Set your PostgreSQL connection URL here
+}
+
+enum Category {
+  ELECTRONICS
+  FURNITURE
+  HOME_APPLIANCES
+  SPORTING_GOODS
+  OUTDOOR
+  TOYS
+}
+
+model User {
+  id          Int           @id @default(autoincrement())
+  firstname   String
+  lastname    String
+  password    String
+  email       String        @unique
+  address     String
+  phone       String
+  isSeller    Boolean       @default(false)
+  token       String        @default("")
+  products    Product[]
+  Transaction Transaction[]
+}
+
+model Product {
+  id           Int           @id @default(autoincrement())
+  title        String
+  price        Int // Storing price in cents to avoid floating-point precision issues
+  rent         Int
+  rent_type    String
+  categories   Category[]
+  description  String
+  date_posted  DateTime      @default(now())
+  views        Int           @default(0)
+  viewers_id   Int[]         @default([])
+  seller       User?         @relation(fields: [sellerId], references: [id])
+  sellerId     Int?
+  transactions Transaction[] // Add this field for product transactions
+  isAvailable  Boolean       @default(true)
+}
+
+model Transaction {
+  id           Int      @id @default(autoincrement())
+  type         String // 'buy' or 'rent'
+  createdAt    DateTime @default(now())
+  user         User     @relation(fields: [userId], references: [id])
+  userId       Int
+  product      Product  @relation(fields: [productId], references: [id])
+  productId    Int
+  rentedFrom   DateTime?
+  rentedUntil  DateTime?
+
+}
