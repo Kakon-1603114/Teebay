@@ -2,11 +2,10 @@ const express = require("express");
 const jwt = require("jsonwebtoken");
 const { ApolloServer } = require("apollo-server-express");
 const cors = require("cors");
-
-//const { typeDefs } = require("./graphql/schema");
-//const { resolvers } = require("./graphql/resolvers");
+const { typeDefs } = require("./graphql/schema");
+const { resolvers } = require("./graphql/resolvers");
 const { prisma} = require("./db/prisma");
-//const { rentExpirationJob } = require("./rentExpiration");
+const { rentExpirationJob } = require("./rentExpiration");
 
 async function startServer() {
   const app = express();
@@ -50,4 +49,4 @@ async function startServer() {
 }
 
 startServer();
-//rentExpirationJob.start();
+rentExpirationJob.start();
