@@ -1,8 +1,10 @@
 {
   "name": "teebay_fe",
-  "version": "1.0.1",
-  "description": "Teebay frontend with react apolloClient and Graphql",
+  "private": true,
+  "version": "1.0.2",
+  "description": "Teebay frontend with react, apolloClient and Graphql",
   "main": "index.js",
+  "type": "module",
   "author": "Kakon Karmoker",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
