@@ -93,7 +93,7 @@ To run the Teebay project locally on your machine, you'll need to install a few 
 4. Install frontend dependencies
 	- Go to the root project directory and then visit frontend directory `root -> teebay_fe`
 	 ``` bash
-	  cd teebay
+	  cd teebay_fe
 	  npm install 
 	  ``` 
 	- Create a `.env` file in the project directory and 
