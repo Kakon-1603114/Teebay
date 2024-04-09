@@ -68,7 +68,6 @@ const Register = () => {
     if (validateData()) {
       // Send data to backend
       try {
-        
         const { data, loading } = await createUser({
           variables: {
             input: {
@@ -98,10 +97,12 @@ const Register = () => {
   return (
     <AuthLayout
       heading={"Sign Up"}
-      classname={"xl:w-[800px] md:w-[700px] w-full border-2 py-10"}>
+      classname={"xl:w-[800px] md:w-[700px] w-full border-2 py-10"}
+    >
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col justify-center items-center px-3 py-5 gap-8 w-[80%]">
+        className="flex flex-col justify-center items-center px-3 py-5 gap-8 w-[80%]"
+      >
         <div className="flex gap-4 w-full">
           <input
             type="text"
@@ -143,14 +144,8 @@ const Register = () => {
             className="border-2 px-4 py-2 outline-none rounded w-full"
           />
         </div>
-        <Password
-          setPassword={setPassword}
-          text="Password"
-        />
-        <Password
-          setPassword={setConfirmPassword}
-          text="Confirm Password"
-        />
+        <Password setPassword={setPassword} text="Password" />
+        <Password setPassword={setConfirmPassword} text="Confirm Password" />
 
         <Button
           text="Sign Up"
@@ -163,7 +158,8 @@ const Register = () => {
         <p>Already have an account? </p>
         <a
           href="/login"
-          className="text-blue-500 hover:text-blue-600 font-semibold">
+          className="text-blue-500 hover:text-blue-600 font-semibold"
+        >
           Sign In
         </a>
       </div>

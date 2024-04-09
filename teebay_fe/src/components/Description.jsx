@@ -18,4 +18,4 @@ const Description = ({productInfo, setProductInfo}) => {
   )
 }
 
-export default Description
+export default Description;

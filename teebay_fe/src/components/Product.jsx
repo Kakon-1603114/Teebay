@@ -15,7 +15,6 @@ const Product = ({ productInfo, from }) => {
   const [deleteProduct, { loading, error }] = useMutation(DELETE_PRODUCT);
   const { isSeller } = useContext(AuthContext);
 
-
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -51,7 +50,7 @@ const Product = ({ productInfo, from }) => {
   }, [confirmationModal, deleteProduct, selectedProduct, toast]);
 
   const handleClickProduct = (event) => {
-    if(productInfo?.isAvailable === false) return;
+    if (productInfo?.isAvailable === false) return;
     // check if click is from delete button
     if (event.target.classList.contains("deleteButton")) {
       return;
@@ -76,7 +75,8 @@ const Product = ({ productInfo, from }) => {
     <div className="w-full p-4 ">
       <div
         onClick={from !== "transactions" ? handleClickProduct : null}
-        className="wrapper border-2 hover:border-2 hover:border-gray-700 min-h-[300px] capitalize p-6 flex flex-col gap-5 cursor-pointer">
+        className="wrapper border-2 hover:border-2 hover:border-gray-700 min-h-[300px] capitalize p-6 flex flex-col gap-5 cursor-pointer"
+      >
         <header className="flex justify-between">
           <h1 className="text-2xl font-medium text-gray-600">
             {productInfo.title ? productInfo.title : "No name"}
@@ -93,16 +93,19 @@ const Product = ({ productInfo, from }) => {
               );
             }}
             className={`${
-              (!isSeller || from === "transactions" || !productInfo.isAvailable ) && "hidden"
+              (!isSeller ||
+                from === "transactions" ||
+                !productInfo.isAvailable) &&
+              "hidden"
             } deleteButton text-gray-600 cursor-pointer text-3xl hover:text-red-500`}
           />
           <span
             className={`${
               productInfo.isAvailable && "hidden"
-            } text-white px-2 py-1 rounded bg-gray-600`}>
+            } text-white px-2 py-1 rounded bg-gray-600`}
+          >
             Sold / Rented
           </span>
-
         </header>
         <span className="flex gap-2 text-gray-400">
           <p>Categories:</p>
@@ -110,7 +113,8 @@ const Product = ({ productInfo, from }) => {
             {productInfo.categories.map((category, index) => (
               <span
                 key={index}
-                className="inline-block bg-gray-200 rounded px-3 py-1 text-sm  text-gray-700 capitalize">
+                className="inline-block bg-gray-200 rounded px-3 py-1 text-sm  text-gray-700 capitalize"
+              >
                 {category}
               </span>
             ))}

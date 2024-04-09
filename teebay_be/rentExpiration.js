@@ -1,10 +1,9 @@
 const cron = require("node-cron");
 const { PrismaClient } = require("@prisma/client");
-
 const prisma = new PrismaClient();
 
 const rentExpirationJob = cron.schedule("0 0 * * *", async () => {
-    console.log("Running rent expiration job.");
+  console.log("Running rent expiration job.");
   try {
     const currentDate = new Date();
 

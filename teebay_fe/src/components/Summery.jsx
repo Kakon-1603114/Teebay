@@ -47,4 +47,4 @@ const Summery = ({productInfo}) => {
   )
 }
 
-export default Summery
+export default Summery;

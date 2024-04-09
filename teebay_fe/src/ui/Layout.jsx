@@ -1,6 +1,10 @@
 import { useApolloClient, useMutation } from "@apollo/client";
 import React, { useContext } from "react";
-import { AiFillDownCircle, AiFillLeftCircle, AiFillRightCircle } from "react-icons/ai";
+import {
+  AiFillDownCircle,
+  AiFillLeftCircle,
+  AiFillRightCircle,
+} from "react-icons/ai";
 import { IoChevronBackCircleOutline } from "react-icons/io5";
 import { Outlet, useNavigate } from "react-router-dom";
 import Loading from "../components/Loading";
@@ -42,7 +46,8 @@ const Layout = ({ children }) => {
             className={`
         text-2xl font-medium tracking-widest text-gray-600 cursor-pointer capitalize ${
           showNav && "xl:block lg:block md:block hidden"
-        }`}>
+        }`}
+          >
             TeeBay | {localStorage.getItem("username")}
           </h1>
           <IoChevronBackCircleOutline
@@ -56,17 +61,17 @@ const Layout = ({ children }) => {
         </div>
 
         <div className="flex justify-center items-center xl:hidden lg:hidden md:hidden gap-4">
-          {!showNav ? 
-          <AiFillLeftCircle
-            onClick={() => setShowNav(!showNav)}
-            className="text-3xl text-gray-600 cursor-pointer"
-          />
-          :
-          <AiFillRightCircle
-            onClick={() => setShowNav(!showNav)}
-            className="text-3xl text-gray-600 cursor-pointer"
-          />
-          }
+          {!showNav ? (
+            <AiFillLeftCircle
+              onClick={() => setShowNav(!showNav)}
+              className="text-3xl text-gray-600 cursor-pointer"
+            />
+          ) : (
+            <AiFillRightCircle
+              onClick={() => setShowNav(!showNav)}
+              className="text-3xl text-gray-600 cursor-pointer"
+            />
+          )}
 
           {showNav && (
             <span className="gap-x-4 flex">
@@ -74,7 +79,8 @@ const Layout = ({ children }) => {
                 onClick={() => {
                   navigate("/transactions");
                 }}
-                className="text-gray-500 px-4 py-2 rounded-md border hover:bg-slate-500 hover:text-white">
+                className="text-gray-500 px-4 py-2 rounded-md border hover:bg-slate-500 hover:text-white"
+              >
                 View Transactions
               </button>
               <Button
@@ -101,7 +107,8 @@ const Layout = ({ children }) => {
             onClick={() => {
               navigate("/transactions");
             }}
-            className="text-gray-500 px-4 py-2 rounded-md border hover:bg-slate-500 hover:text-white">
+            className="text-gray-500 px-4 py-2 rounded-md border hover:bg-slate-500 hover:text-white"
+          >
             View Transactions
           </button>
           <Button

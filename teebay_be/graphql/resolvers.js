@@ -87,7 +87,6 @@ const resolvers = {
         orderBy: {
           createdAt: "desc",
         },
-
       });
 
       return transactions;
@@ -274,8 +273,6 @@ const resolvers = {
       await prisma.transaction.deleteMany({
         where: { productId: pid },
       });
-
-
 
       const deletedProduct = await prisma.product.delete({
         where: { id: pid },

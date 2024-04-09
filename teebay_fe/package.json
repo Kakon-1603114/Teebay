@@ -3,7 +3,6 @@
   "private": true,
   "version": "1.0.2",
   "description": "Teebay frontend with react, apolloClient and Graphql",
-  "main": "index.js",
   "type": "module",
   "author": "Kakon Karmoker",
   "scripts": {

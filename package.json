@@ -1,6 +1,6 @@
 {
   "name": "teebay",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "Welcome to **Teebay**, your one-stop online marketplace for all your buying, selling, and renting needs. Teebay is built using a modern tech stack, including ***React, Vite, Tailwind CSS, Apollo Client, Redux*** in the frontend, and ***Express.js, GraphQL, Apollo Server, Prisma, and PostgreSQL*** in the backend. It also utilizes ***JWT*** for user authentication.",
   "main": "index.js",
   "scripts": {
