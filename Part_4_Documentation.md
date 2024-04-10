@@ -10,7 +10,7 @@ In the frontend, Teebay leverages the following technologies:
 - Apollo Client: A comprehensive GraphQL client for React applications, facilitating efficient data fetching and management through GraphQL queries and mutations.
 - Redux: A predictable state container for JavaScript applications, utilized for managing complex application state and enabling seamless interaction between components.
 
-**Backend Technologies**
+## Backend Technologies
 On the backend, Teebay employs a powerful tech stack comprising:
 
 - Express.js: A minimal and flexible Node.js web application framework, used for building robust and scalable backend APIs.
