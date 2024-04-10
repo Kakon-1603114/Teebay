@@ -17,7 +17,7 @@ const SellerComponent = () => {
   }, [data]);
   return (
     <>
-      <h1 className="text-4xl text-gray-600 tracking-tighter">My Products</h1>
+      <h1 className="text-4xl mt-14 text-green-600 tracking-tighter">My Products</h1>
       {loading ? (
         <FiLoader className="animate-spin text-4xl text-gray-600 h-full" />
       ) : error ? (

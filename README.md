@@ -13,6 +13,7 @@ Welcome to **Teebay**, your one-stop online marketplace for all your buying, sel
 6.  [Authentication](#authentication)
 7.  [Database](#database)
 8.  [API Endpoints](#api-endpoints)
+9.  [Demo Video](#Demo-Video)
 
 
 ## [Introduction](#introduction)
@@ -153,3 +154,7 @@ Teebay uses PostgreSQL as its database and Prisma as the ORM. You can configure 
 ## API Endpoints
 
 The API endpoints are defined using GraphQL. You can explore and test the API by accessing `http://localhost:4000/graphql` when the backend server is running.
+
+
+## [Demo Video](#Demo-Video)
+https://github.com/Kakon-1603114/Teebay/assets/53190478/4c275328-7300-4ca3-ac5c-0c3b6c6af1fc
