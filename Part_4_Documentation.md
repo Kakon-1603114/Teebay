@@ -1,24 +1,24 @@
-**Introduction**
+## Introduction
 Teebay is a demo online marketplace solution for buying, selling, and renting products of needs. Teebay is built using a modern tech stack, incorporating cutting-edge technologies in both the frontend and backend to provide a seamless user experience.
 
-**Frontend Technologies**
+## Frontend Technologies
 In the frontend, Teebay leverages the following technologies:
 
-React: A popular JavaScript library for building user interfaces, providing a robust and efficient development experience.
-Vite: A fast, modern build tool that serves as the frontend development server and bundler, enabling rapid development and hot module replacement.
-Tailwind CSS: A utility-first CSS framework that streamlines styling and design, allowing for rapid prototyping and consistent UI across the application.
-Apollo Client: A comprehensive GraphQL client for React applications, facilitating efficient data fetching and management through GraphQL queries and mutations.
-Redux: A predictable state container for JavaScript applications, utilized for managing complex application state and enabling seamless interaction between components.
+- React: A popular JavaScript library for building user interfaces, providing a robust and efficient development experience.
+- Vite: A fast, modern build tool that serves as the frontend development server and bundler, enabling rapid development and hot module replacement.
+- Tailwind CSS: A utility-first CSS framework that streamlines styling and design, allowing for rapid prototyping and consistent UI across the application.
+- Apollo Client: A comprehensive GraphQL client for React applications, facilitating efficient data fetching and management through GraphQL queries and mutations.
+- Redux: A predictable state container for JavaScript applications, utilized for managing complex application state and enabling seamless interaction between components.
 
 **Backend Technologies**
 On the backend, Teebay employs a powerful tech stack comprising:
 
-Express.js: A minimal and flexible Node.js web application framework, used for building robust and scalable backend APIs.
-GraphQL: A query language for APIs, enabling clients to request only the data they need and reducing over-fetching and under-fetching of data.
-Apollo Server: A GraphQL server implementation for Node.js, facilitating the creation of GraphQL APIs and handling GraphQL queries and mutations.
-Prisma: An ORM (Object-Relational Mapping) tool that simplifies database access and management, allowing for seamless interaction with the PostgreSQL database.
-PostgreSQL: A powerful open-source relational database management system, chosen for its scalability, reliability, and extensibility.
-JWT (JSON Web Tokens): A compact, URL-safe means of representing claims to be transferred between two parties, used for secure user authentication and authorization.
+- Express.js: A minimal and flexible Node.js web application framework, used for building robust and scalable backend APIs.
+- GraphQL: A query language for APIs, enabling clients to request only the data they need and reducing over-fetching and under-fetching of data.
+- Apollo Server: A GraphQL server implementation for Node.js, facilitating the creation of GraphQL APIs and handling GraphQL queries and mutations.
+- Prisma: An ORM (Object-Relational Mapping) tool that simplifies database access and management, allowing for seamless interaction with the PostgreSQL database.
+- PostgreSQL: A powerful open-source relational database management system, chosen for its scalability, reliability, and extensibility.
+- JWT (JSON Web Tokens): A compact, URL-safe means of representing claims to be transferred between two parties, used for secure user authentication and authorization.
 
 ## Challenges Faced and Solutions Implemented
 
